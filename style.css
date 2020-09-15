@@ -1,0 +1,94 @@
+@font-face {
+  font-family: Genty;
+  src: url(fonts/GentyDemo-Regular.otf);
+}
+
+.main {
+  background-color: #A84217;
+  width: 100;
+	height: 100;
+	
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+}
+
+div#welcome {
+  height: 20%;
+  font-family: Genty;
+  font-size: 3em;
+  letter-spacing: 0.15em;
+  /* color: white; */
+}
+
+h1 {
+  color: black;
+  -webkit-text-fill-color: #332838; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0.02em;
+  -webkit-text-stroke-color: #CFC89A;
+  /* text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000; */
+}
+
+div#jukebox {
+  position:relative;
+  height: 80%;
+  /* overflow: hidden; */
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+div#jukebox img {
+  position: absolute;
+  width: 30%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes FadeInOut {
+  0% {
+    opacity:1;
+  }
+  45% {
+  opacity:1;
+  }
+  55% {
+  opacity:0;
+  }
+  100% {
+  opacity:0;
+  }
+}
+
+img.top {
+animation-name: FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 0.5s;
+animation-direction: alternate;
+}
