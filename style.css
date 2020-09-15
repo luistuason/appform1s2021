@@ -5,8 +5,8 @@
 
 .main {
   background-color: #A84217;
-  width: 100;
-	height: 100;
+  width: 100%;
+	height: 100%;
 	
 	position: absolute;
 	top:0;
@@ -28,29 +28,16 @@
 }
 
 div#welcome {
-  height: 20%;
-  font-family: Genty;
-  font-size: 3em;
-  letter-spacing: 0.15em;
-  /* color: white; */
+  height: 30%;
 }
 
-h1 {
-  color: black;
-  -webkit-text-fill-color: #332838; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 0.02em;
-  -webkit-text-stroke-color: #CFC89A;
-  /* text-shadow:
-       3px 3px 0 #000,
-     -1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000; */
+div#welcome img {
+  width: 75%;
 }
 
 div#jukebox {
   position:relative;
-  height: 80%;
+  height: 70%;
   /* overflow: hidden; */
   margin: 0;
   border: 0;
@@ -92,3 +79,133 @@ animation-iteration-count: infinite;
 animation-duration: 0.5s;
 animation-direction: alternate;
 }
+
+
+/* Loading Screen */
+/* Loading Screen CSS */
+#loadingscreen{
+  background-color: #A84217;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  text-align: center;
+  -webkit-transition: opacity 1.5s;
+  transition: opacity 1.5s;
+}
+#loadingscreen span{
+  color: #dddddd;
+  width: 100vh;
+  padding: 0;
+}
+#loadingRing {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 256px;
+  height: 256px;
+  margin-left: -128px;
+  margin-top: -128px;
+}
+#loadingRing div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 256px;
+  height: 256px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.17, .88, 0.73, .12) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+#loadingRing div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+#loadingRing div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+#loadingRing div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+       transform: rotate(0deg);
+  }
+  100% {
+       transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes lds-ring {
+  0% {
+   transform: rotate(0deg);
+  }
+  100% {
+       transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes lds-ring {
+  0% {
+  transform: rotate(0deg);
+  }
+  100% {
+       transform: rotate(360deg);
+  }
+}
+  
+@-o-keyframes lds-ring {
+  0% {
+       transform: rotate(0deg);
+  }
+  100% {
+       transform: rotate(360deg);
+  }
+}
+
+#loadingscreen #logo {
+  position: relative;
+  width: 52vh;
+  height: 52vh;
+  top: 50%;
+  -webkit-transform: translateY(-56%);
+  transform: translateY(-56%);
+  -webkit-transition: opacity 1.5s;
+  transition: opacity 1.5s;
+  margin: auto;
+}
+#loadingscreen #circuit-logo {
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+} 
+#loadingscreen #circuit-logo:hover{
+  z-index: 99999;
+  transform: scale(1.1);
+  transition: all ease 500ms;
+}
+#loadingscreen #disclaimer {
+  z-index: 9999;
+  position: absolute;
+  bottom: 10%;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+  color: rgb(2, 2, 2);
+  font-size: 2.25vh;
+  text-align: center;
+}
+/* End of Loading Screen */
