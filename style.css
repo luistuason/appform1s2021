@@ -222,6 +222,7 @@ img.top {
     margin-bottom: 3px;
     border: 0;
     font-family: NotoSans;
+    width: 250px;
   }
 
   form input, select {
@@ -234,10 +235,13 @@ img.top {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    width: 250px;
   }
 
   form .error {
     color: #ff0000;
+    display: block;
+    width: 250px;
   }
 
   #item1, #item2, #item3, #item4, #item5, #item6, #item7 {

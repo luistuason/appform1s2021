@@ -10,21 +10,14 @@ $(document).ready(function(){
   });
 
   $("form[name='registration']").validate({
-    // Specify validation rules
     rules: {
-      // The key name on the left side is the name attribute
-      // of an input field. Validation rules are defined
-      // on the right side
       firstname: "required",
       lastname: "required",
       email: {
         required: true,
-        // Specify that email should be validated
-        // by the built-in "email" rule
         email: true
       },
     },
-    // Specify validation error messages
     messages: {
       firstname: "Please enter your firstname",
       lastname: "Please enter your lastname",
@@ -34,10 +27,77 @@ $(document).ready(function(){
       },
       email: "Please enter a valid email address"
     },
-    // Make sure the form is submitted to the destination defined
-    // in the "action" attribute of the form when valid
     submitHandler: function(form) {
       form.submit();
     }
   });
+
+  $("form[name='registration']").validate();
+  $("#lastname").rules("add", {
+    required: true,
+    messages: {
+      required: "Please enter your Last Name."
+    }
+  });
+  $("#lastname").rules("add", {
+    minlength: 2,
+    messages: {
+      minlength: "Please enter a valid name with at least 2 characters."
+    }
+  });
+  $("#firstname").rules("add", {
+    required: true,
+    messages: {
+      required: "Please enter your First Name."
+    }
+  });
+  $("#firstname").rules("add", {
+    minlength: 2,
+    messages: {
+      minlength: "Please enter a valid name with at least 2 characters."
+    }
+  });
+  $("#lastname").rules("add", {
+    required: true,
+    messages: {
+      required: "Please enter your Last Name."
+    }
+  });
+  $("#studentnum").rules("add", {
+    required: true,
+    messages: {
+      required: "Please enter your Student Number."
+    }
+  });
+  $("#fblink").rules("add", {
+    required: true,
+    messages: {
+      required: "Please enter the link to your Facebook Profile."
+    }
+  });
+  $("#fblink").rules("add", {
+    url: true,
+    messages: {
+      required: "Please enter a valid URL."
+    }
+  });
+  $("#contactnum").rules("add", {
+    required: true,
+    messages: {
+      required: "Please enter your Contact Number."
+    }
+  });
+  $("#contactnum").rules("add", {
+    digits: true,
+    messages: {
+      required: "Please enter a valid phone number."
+    }
+  });
+  $("#question").rules("add", {
+    required: true,
+    messages: {
+      required: "Answer the question naman :>>>"
+    }
+  });
+
 });
