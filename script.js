@@ -1,37 +1,25 @@
 $(document).ready(function(){
   $('#scene2').hide();
+  $('#seeyou').hide();
 
+  //switch from welcome to form
   $('#scene1').click(function(){
-      $('#scene1').fadeOut(800, function(){
-          $('#scene2').fadeIn(800);
-          $('#welcome-img').fadeOut(800);
-      });
-
+    $('#scene1').fadeOut(800, function(){
+        $('#scene2').fadeIn(800);
+        $('#welcome-img').fadeOut(800);
+        $('#welcome-img2').fadeOut(800);
+    });
   });
 
-  $("form[name='registration']").validate({
-    rules: {
-      firstname: "required",
-      lastname: "required",
-      email: {
-        required: true,
-        email: true
-      },
-    },
-    messages: {
-      firstname: "Please enter your firstname",
-      lastname: "Please enter your lastname",
-      password: {
-        required: "Please provide a password",
-        minlength: "Your password must be at least 5 characters long"
-      },
-      email: "Please enter a valid email address"
-    },
-    submitHandler: function(form) {
-      form.submit();
+  $('form').submit(function(){
+    if($(this).valid()) {
+      $('#main').fadeOut(1500, function(){
+        $('#seeyou').fadeIn(1500);
+      });
     }
   });
 
+  //form validation
   $("form[name='registration']").validate();
   $("#lastname").rules("add", {
     required: true,
@@ -73,12 +61,6 @@ $(document).ready(function(){
     required: true,
     messages: {
       required: "Please enter the link to your Facebook Profile."
-    }
-  });
-  $("#fblink").rules("add", {
-    url: true,
-    messages: {
-      required: "Please enter a valid URL."
     }
   });
   $("#contactnum").rules("add", {

@@ -16,7 +16,7 @@
 		
 	</head>
 	<body>
-    <div class="main">
+    <div class="main" id="main">
       <div class="welcome">
         <img id="welcome-img" class="top" src="img/welcome-lit.png" style="z-index: 2;">
         <img id="welcome-img2" src="img/welcome.png" style="z-index: 1;">
@@ -37,7 +37,7 @@
           </div>
 
           <div class="foreground">
-            <form name="registration" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc_zRYqJnlTjBmnVDqXQQ1UzSH3DtX4E9zjKATOdFzfqxsTrg/formResponse">
+            <form name="registration" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc_zRYqJnlTjBmnVDqXQQ1UzSH3DtX4E9zjKATOdFzfqxsTrg/formResponse" method="post" target="hidden-form">
               <div class="zoomViewport">
                 <div class="zoomContainer">
                   <div id="item1" class="zoomTarget">
@@ -77,12 +77,12 @@
                   <div id="item6" class="zoomTarget">
                     <div class="form-container">
                       <label for="contactnum">Contact Number</label>
-                      <input type="text" id="contactnum" placeholder="09XX XXX XXXX" name="entry.1919027447" required>
+                      <input type="text" id="contactnum" placeholder="09XXXXXXXXX" name="entry.1919027447" required>
                     </div>
                   </div>
                   <div id="item7" class="zoomTarget">
                     <div class="form-container">
-                      <label for="question">Jukebox Question</label>
+                      <label for="question">Ano theme song ng buhay mo this 2020?</label>
                       <input type="text" id="question" placeholder="" name="entry.1197289047" required>
                     </div>
                   </div>
@@ -96,9 +96,13 @@
             </form>
           </div>
         </div>
-
       </div>
     </div>
+
+    <div class="seeyou" id="seeyou">
+      <img src="img/form_after.png">
+    </div>
+    <IFRAME style="display:none" name="hidden-form"></IFRAME>
 	</body>
 
 </html>
