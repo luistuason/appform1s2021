@@ -131,7 +131,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 80%;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 /* Scene 1 */
@@ -191,7 +191,7 @@ img.top {
 }
 
 .background {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100%;
   bottom:0;
@@ -211,7 +211,7 @@ img.top {
 
   .zoomViewport {
     overflow:hidden;
-    position: fixed;
+    position: absolute;
     padding:0;
     width: 84vw;
     height: 20vh;
@@ -347,7 +347,7 @@ img.top {
   #navigation {
     width:100%;
     height: 20%;
-    position:fixed;
+    position:absolute;
     left:50%;
     margin-left:-50%;
     bottom: 25vh;
@@ -382,7 +382,7 @@ img.top {
   }
 
   .zoomViewport {
-    position: fixed;
+    position: absolute;
     padding:0;
     width: 40vw;
     height: 30vh;
@@ -527,7 +527,7 @@ img.top {
     top: 80vh;
     width:50%;
     height: 20%;
-    position:fixed;
+    position:absolute;
     left:50%;
     margin-left:-25%;
     bottom: 0;
