@@ -9,7 +9,8 @@
     <link rel="icon" href="img/upcircuitformal_small.png" type="image/png">
 		<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
 		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="jquery.zoomooz.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
 		
@@ -17,32 +18,82 @@
 	<body>
     <div class="main">
       <div class="welcome">
-        <img id="welcome-img" src="img/welcome.png">
+        <img id="welcome-img" class="top" src="img/welcome-lit.png" style="z-index: 2;">
+        <img id="welcome-img" src="img/welcome.png" style="z-index: 1;">
         <div class="logo">
           <img src="img/upcircuitformal_small.png">
         </div>
       </div>
       <div class="jukebox-container">
         <div id="scene1">
-          <img class="bottom" src="img/jukebox2.png">
-          <img class="top" src="img/jukebox1.png">
+          <img class="thumbnail" src="img/jukebox1.png">
+          <img class="top thumbnail" src="img/jukebox2.png">
         </div>
 
         <div id="scene2">
-          <div class="zoomViewport">
-            <div class="zoomContainer">
-              <div id="item1" class="zoomTarget"></div>
-              <div id="item2" class="zoomTarget"></div>
-              <div id="item2b" class="zoomTarget"></div>
-              <div id="item3" class="zoomTarget">
-                  <div id="item3b" class="zoomTarget"></div>
-              </div>
-              <div id="item4" class="zoomTarget"></div>
-            </div>
+
+          <div class="background">
+            <img src="img/jukebox-screen.png">
           </div>
-          <div id="navigation">
-            <div id="prev" class="zoomButton" data-type="prev" data-root=".zoomViewport">&lt;</div>
-            <div id="next" class="zoomButton" data-type="next" data-root=".zoomViewport">&gt;</div>
+
+          <div class="foreground">
+            <form name="registration" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc_zRYqJnlTjBmnVDqXQQ1UzSH3DtX4E9zjKATOdFzfqxsTrg/formResponse">
+              <div class="zoomViewport">
+                <div class="zoomContainer">
+                  <div id="item1" class="zoomTarget">
+                    <div class="form-container">
+                      <label for="lastname">Last Name</label>
+                      <input type="text" id="lastname" placeholder="Ignacio" name="entry.750995626" required>
+                    </div>
+                  </div>
+                  <div id="item2" class="zoomTarget">
+                    <div class="form-container">
+                      <label for="firstname">First Name</label>
+                      <input type="text" id="firstname" placeholder="Kaye" name="entry.1661037685" required>
+                    </div>
+                  </div>
+                  <div id="item3" class="zoomTarget">
+                    <div class="form-container">
+                      <label for="studentnum">Student Number</label>
+                      <input type="text" id="studentnum" placeholder="2020-ABCDE" name="entry.978503855" required>
+                    </div>
+                  </div>
+                  <div id="item4" class="zoomTarget">
+                    <div class="form-container">
+                      <label for="degree_program">Degree Program</label>
+                      <select id="degree_program" name="entry.2117319032">
+                        <option value="BS Computer Engineering">BS Computer Engineering</option>
+                        <option value="BS Electrical Engineering">BS Electrical Engineering</option>
+                        <option value="BS Electronics Engineering">BS Electronics Engineering</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div id="item5" class="zoomTarget">
+                    <div class="form-container">
+                      <label for="fblink">Facebook Link</label>
+                      <input type="text" id="fblink" placeholder="fb.com/username" name="entry.722781221" required>
+                    </div>
+                  </div>
+                  <div id="item6" class="zoomTarget">
+                    <div class="form-container">
+                      <label for="contactnum">Contact Number</label>
+                      <input type="text" id="contactnum" placeholder="09XX XXX XXXX" name="entry.1919027447" required>
+                    </div>
+                  </div>
+                  <div id="item7" class="zoomTarget">
+                    <div class="form-container">
+                      <label for="question">Jukebox Question</label>
+                      <input type="text" id="question" placeholder="Jukebox Question*" name="entry.1197289047" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="navigation">
+                <a id="prev" class="zoomButton" data-type="prev" data-root=".zoomViewport">&larr;</a>
+                <button type="submit" id="submit">Submit</button>
+                <a id="next" class="zoomButton" data-type="next" data-root=".zoomViewport">&rarr;</a>
+              </div>
+            </form>
           </div>
         </div>
 
