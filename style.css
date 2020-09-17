@@ -65,7 +65,7 @@ body {
     height: 7vh;
   }
 
-  #scene1 img {
+  #jukebox img {
     position: absolute;
     left: 50%;
     height: auto;
@@ -87,7 +87,7 @@ body {
     height: 10vh;
   }
 
-  #scene1 img {
+  #jukebox img {
     position: absolute;
     left: 50%;
     height: auto;
@@ -108,7 +108,7 @@ body {
     height: 15vh;
   }
 
-  #scene1 img {
+  #jukebox img {
     position: absolute;
     left: 50%;
     height: auto;
@@ -131,15 +131,15 @@ body {
   display: flex;
   flex-direction: column;
   height: 80%;
-  overflow: hidden;
+  align-items: center;
+  /* overflow: hidden; */
 }
 
-/* Scene 1 */
+/* Jukebox */
 
-#scene1 {
+#jukebox {
   margin: 0;
   padding: 0;
-  /* border: 2px solid black; */
   width: 100%;
   height: 100%;
   position:relative;
@@ -148,7 +148,7 @@ body {
   overflow: hidden;
 }
 
-#scene1 img {
+#jukebox img {
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
   -o-transition: opacity 0.5s ease-in-out;
@@ -170,16 +170,15 @@ img.top {
 #scene2 {
   margin: 0;
   padding: 0;
-  /* border: 2px solid green; */
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
   width: 100%;
   height: 100%;
-  position: relative;
+  position: absolute;
   align-items: center;
   align-content: center;
-  /* background-image: url("img/jukebox-screen.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain; */
 }
 
 .foreground {
@@ -188,25 +187,16 @@ img.top {
   width: 100%;
   height: 100%;
   z-index: 10;
-}
-
-.background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom:0;
+  background-image: url(img/jukebox-screen.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* For Mobile */
 @media screen and (min-width: 280px) {
-  .background img {
+  .foreground {
     position: absolute;
-    width: 200vw;
-    height: auto;
-    left: 50%;
-    margin-left: -100vw;
-    bottom: 50%;
-    margin-bottom: -20vh;
   }
 
   .zoomViewport {
@@ -215,13 +205,14 @@ img.top {
     padding:0;
     width: 84vw;
     height: 20vh;
-    border:0;
     left: 50%;
     margin-left:-42vw;
-    margin-top:10vh;
+    top: 50%;
+    margin-top: -10vh;
     background-color: transparent;
     border-top-left-radius: 10vh;
     border-top-right-radius: 10vh;
+    border: 1px solid black;
   }
   
   .zoomContainer {
@@ -371,15 +362,7 @@ img.top {
 }
 
 /* For Desktop/Laptop */
-@media screen and (min-width: 1023px) {
-  .background img {
-    position: absolute;
-    width: 98vw;
-    height: auto;
-    left: 50%;
-    margin-left: -49vw;
-    bottom: 0;
-  }
+@media screen and (min-width: 1024px) {
 
   .zoomViewport {
     position: absolute;
@@ -387,10 +370,11 @@ img.top {
     width: 40vw;
     height: 30vh;
     border:1px solid black;
-    left: 50%;
     overflow:hidden;
+    left: 50%;
     margin-left:-20vw;
-    margin-top: 22vh;
+    top: 50%;
+    margin-top: -8vh;
     background-color: transparent;
     border-top-left-radius: 10vh;
     border-top-right-radius: 10vh;
@@ -524,28 +508,33 @@ img.top {
   } 
 
   #navigation {
-    top: 80vh;
+    top: 75vh;
     width:50%;
     height: 20%;
     position:absolute;
     left:50%;
     margin-left:-25%;
     bottom: 0;
+    justify-content: center;
+    justify-items: center;
   }
 
   #prev {
-    top: 10px;
+    top: 50%;
+    margin-top: -2.5vh;
     left: 10px;
   }
 
   #submit {
-    top: 10px;
+    top: 50%;
+    margin-top: -2.5vh;
     left: 50%;
-    margin-left:-75px
+    margin-left: -5vw;
   }
 
   #next {
-    top: 10px;
+    top: 50%;
+    margin-top: -2.5vh;
     right:10px;
   }
 }
@@ -554,6 +543,9 @@ img.top {
 .seeyou{
   overflow: hidden;
   position: absolute;
+  left:0;
+  right: 0;
+  top: 0;
   bottom: 0;
   height: 100vh;
   width: 100%;
