@@ -3,17 +3,15 @@ $(document).ready(function(){
   $('#seeyou').hide();
 
   //switch from welcome to form
-  $('#scene1').click(function(){
-    $('#scene1').fadeOut(800, function(){
+  $('#jukebox').click(function(){
+    $('#main').fadeOut(800, function(){
         $('#scene2').fadeIn(800);
-        $('#welcome-img').fadeOut(800);
-        $('#welcome-img2').fadeOut(800);
     });
   });
 
   $('form').submit(function(){
     if($(this).valid()) {
-      $('#main').fadeOut(1500, function(){
+      $('#scene2').fadeOut(1500, function(){
         $('#seeyou').fadeIn(1500);
       });
     }
