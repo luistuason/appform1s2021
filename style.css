@@ -126,7 +126,6 @@ body {
 .jukebox-container {
   margin: 0;
   padding: 0;
-  /* border: 1px solid white; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -311,7 +310,7 @@ img.top {
     background-color: transparent;
     border-top-left-radius: 10vh;
     border-top-right-radius: 10vh;
-    border: 1px solid black;
+    /* border: 1px solid black; */
   }
   
   .zoomContainer {
@@ -384,7 +383,7 @@ img.top {
     background-color: transparent;
     border-top-left-radius: 10vh;
     border-top-right-radius: 10vh;
-    border: 1px solid black;
+    /* border: 1px solid black; */
   }
   
   .zoomContainer {
@@ -451,7 +450,7 @@ img.top {
     padding:0;
     width: 40vw;
     height: 30vh;
-    border:1px solid black;
+    /* border:1px solid black; */
     overflow:hidden;
     left: 50%;
     margin-left:-20vw;
