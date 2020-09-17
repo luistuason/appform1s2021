@@ -413,6 +413,7 @@ img.top {
   }
 
   #prev, #next, #submit {
+    font-family: Klein;
     position:absolute;
     width:75px;
     height:25px;
@@ -486,6 +487,7 @@ img.top {
   }
 
   #prev, #next, #submit {
+    font-family: Klein;
     position:absolute;
     width:150px;
     height:50px;
@@ -564,6 +566,7 @@ img.top {
   }
 
   #prev, #next, #submit {
+    font-family: Klein;
     position:absolute;
     width:10vw;
     height:5vh;
