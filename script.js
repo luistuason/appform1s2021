@@ -7,9 +7,14 @@ $(document).ready(function(){
 
   //switch from welcome to form
   $('#jukebox').click(function(){
+    $('#overlay').fadeIn(800);
     $('#main').fadeOut(800, function(){
         $('#scene2').fadeIn(800);
     });
+  });
+
+  $('#overlay').click(function(){
+    $('#overlay').fadeOut(800);
   });
 
   //show end screen
