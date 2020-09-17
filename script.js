@@ -1,4 +1,7 @@
+var x = -1;
+
 $(document).ready(function(){
+  $("#music").trigger('load');
   $('#scene2').hide();
   $('#seeyou').hide();
 
@@ -9,12 +12,44 @@ $(document).ready(function(){
     });
   });
 
+  //show end screen
   $('form').submit(function(){
     if($(this).valid()) {
       $('#scene2').fadeOut(1500, function(){
         $('#seeyou').fadeIn(1500);
       });
     }
+  });
+
+  //play music
+  $('#next').click(function() {
+    for ( var i = 0, l = 7; i < l; i++ ) {
+      $('audio#music')[i].pause();
+    }
+    x++;
+    if(x == 7) {
+      x = 0;
+    }
+    if(x == 0) {
+      $('audio#music')[x].play();
+    } else if (x > 0 && x < 7) {
+      $('audio#music')[x].play();
+    }
+    console.log(x);
+  });
+
+  $('#prev').click(function() {
+    for ( var i = 0, l = 7; i < l; i++ ) {
+      $('audio#music')[i].pause();
+    }
+    x--;
+    if(x == -1 || x == -2) {
+      x = 6;
+      $('audio#music')[x].play();
+    } else if (x >= 0 && x < 7) {
+      $('audio#music')[x].play();
+    }
+    console.log(x);
   });
 
   //form validation
