@@ -3,6 +3,11 @@
   src: url(fonts/NotoSansJP-Regular.otf);
 }
 
+@font-face {
+  font-family: Klein;
+  src: url(fonts/Klein-Regular.otf);
+}
+
 @keyframes FadeInOut {
   0% {
     opacity:1;
@@ -204,16 +209,18 @@ img.top {
     display: block;
     margin-bottom: 3px;
     border: 0;
-    font-family: NotoSans;
+    font-family: Klein;
     width: 250px;
+    color: #cfc89a;
   }
 
   form input, select {
+    font-family: Klein;
     height: 25px;
     line-height: 25px;
-    background: #FAF5D4;
-    border: 1px solid black;
-    color: #000;
+    background: #322938;
+    border: 1px solid #cfc89a;
+    color: #cfc89a;
     padding: 0 6px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -222,16 +229,18 @@ img.top {
   }
 
   form .error {
+    font-family: Klein;
     color: #ff0000;
     display: block;
     width: 250px;
   }
 
   #item1, #item2, #item3, #item4, #item5, #item6, #item7 {
-    background-color: #FAF5D4;
+    background-color: #322938;
     position:absolute;
     width: 300px;
     height: 150px;
+    border-radius: 25px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
       0 1px 5px 0 rgba(0,0,0,0.12),
       0 3px 1px -2px rgba(0,0,0,0.2);
