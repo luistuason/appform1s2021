@@ -75,7 +75,7 @@ body {
   }
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   #welcome-img, #welcome-img2 {
     top: 10%;
     width: 90vw;
@@ -97,7 +97,7 @@ body {
 }
 
 /* for computers */
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 1024px) {
   #welcome-img, #welcome-img2 {
     height: 30vh;
     width: auto;
@@ -282,6 +282,16 @@ img.top {
 
 /* end of form */
 
+#prev:hover, #next:hover, #submit:hover {
+  background-color:#d18846;
+}
+
+#prev:active, #next:active, #submit:active {
+  background-color: #d18846;
+  box-shadow: 0 5px #82552f;
+  transform: translateY(4px);
+}
+
 /* For Mobile */
 @media screen and (min-width: 280px) {
   .foreground {
@@ -320,7 +330,7 @@ img.top {
     position:absolute;
     left:50%;
     margin-left:-50%;
-    bottom: 25vh;
+    bottom: 0;
   }
 
   #prev, #next, #submit {
@@ -338,16 +348,6 @@ img.top {
     box-shadow: 0 9px #9b6635;
   }
 
-  #prev:hover, #next:hover, #submit:hover {
-    background-color:#d18846;
-  }
-
-  #prev:active, #next:active, #submit:active {
-    background-color: #d18846;
-    box-shadow: 0 5px #82552f;
-    transform: translateY(4px);
-  } 
-
   #prev {
     top: 10px;
     left: 10px;
@@ -362,6 +362,84 @@ img.top {
   #next {
     top: 10px;
     right:10px;
+  }
+}
+
+/* For Tablets */
+@media screen and (min-width: 768px) {
+  .foreground {
+    position: absolute;
+  }
+
+  .zoomViewport {
+    overflow:hidden;
+    position: absolute;
+    padding:0;
+    width: 80vw;
+    height: 215px;
+    left: 50%;
+    margin-left:-40vw;
+    top: 50%;
+    margin-top: -5vh;
+    background-color: transparent;
+    border-top-left-radius: 10vh;
+    border-top-right-radius: 10vh;
+    border: 1px solid black;
+  }
+  
+  .zoomContainer {
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    position:relative;
+    border: 0;
+    background-color: transparent;
+  }
+
+  #navigation {
+    width:100%;
+    height: 20%;
+    position:absolute;
+    left:50%;
+    margin-left:-50%;
+    bottom: 5vh;
+  }
+
+  #prev, #next, #submit {
+    position:absolute;
+    width:150px;
+    height:50px;
+    /* display: inline-block; */
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    background-color: #bf7c3a;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #9b6635;
+  }
+
+  #prev {
+    top: 50%;
+    margin-top: -25px;
+    left: 10vw;
+    font-size: 2em;
+  }
+
+  #submit {
+    top: 50%;
+    margin-top: -25px;
+    left: 50%;
+    margin-left: -75px;
+    font-size: 1.5em;
+  }
+
+  #next {
+    top: 50%;
+    margin-top: -25px;
+    right:10vw;
+    font-size: 2em;
   }
 }
 
@@ -395,13 +473,13 @@ img.top {
   }
 
   #navigation {
-    top: 75vh;
+    /* top: 75vh; */
     width:50%;
     height: 20%;
     position:absolute;
     left:50%;
     margin-left:-25%;
-    bottom: 0;
+    bottom: 3vh;
     justify-content: center;
     justify-items: center;
   }
@@ -440,15 +518,6 @@ img.top {
     margin-top: -2.5vh;
     right:10px;
     font-size: 2em;
-  }
-  #prev:hover, #next:hover, #submit:hover {
-    background-color:#d18846;
-  }
-
-  #prev:active, #next:active, #submit:active {
-    background-color: #d18846;
-    box-shadow: 0 5px #82552f;
-    transform: translateY(4px);
   } 
 }
 
@@ -480,7 +549,7 @@ img.top {
   }
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .seeyou img {
     position: absolute;
     width: 70vw;
@@ -492,7 +561,7 @@ img.top {
   }
 }
 
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 1024px) {
   .seeyou img {
     position: absolute;
     width: 50vw;
