@@ -325,45 +325,38 @@ img.top {
   }
 
   #item1 {
-    left: 600px;
+    left: 1500px;
     top: 10px;
-    /* 900px */
   }
 
   #item2 {
     top: 10px;
-    left: 1000px; 
-    /* 1300px */
+    left: 2000px; 
   }
 
   #item3 {
     top: 10px;
-    left: 1400px;
-    /* 1700 */
+    left: 2500px;
   }
 
   #item4 {
     top: 10px;
-    left: 1800px;
-    /* 2100 */
+    left: 3000px;
   }
 
   #item5 {
     top: 10px;
-    left: 2200px;
-    /* 2500 */
+    left: 3500px;
   }
 
   #item6 {
     top: 10px;
-    left: 2600px;
-    /* 2900px */
+    left: 4000px;
   }
 
   #item7 {
     top: 10px;
-    left: 3000px;
-    /* 3300px */
+    left: 4500px;
   }
 
 /* end of form */
