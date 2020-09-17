@@ -4,6 +4,7 @@ $(document).ready(function(){
   $("#music").trigger('load');
   $('#scene2').hide();
   $('#seeyou').hide();
+  $('#entry-overlay').fadeIn(800);
 
   //switch from welcome to form
   $('#jukebox').click(function(){
@@ -11,6 +12,10 @@ $(document).ready(function(){
     $('#main').fadeOut(800, function(){
         $('#scene2').fadeIn(800);
     });
+  });
+
+  $('#entry-overlay').click(function(){
+    $('#entry-overlay').fadeOut(800);
   });
 
   $('#overlay').click(function(){
